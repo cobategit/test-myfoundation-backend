@@ -1,0 +1,26 @@
+{
+  "name": "be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon src/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon src/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.3",
+    "uuid": "^9.0.0"
+  }
+}
