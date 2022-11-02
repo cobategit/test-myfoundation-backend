@@ -2,7 +2,7 @@ const { promisify } = require('util')
 const jwt = require('jsonwebtoken')
 const path = require('path')
 const asyncCatch = require('../utils/asyncCatch')
-const logEvents = require('../utils/logEvents')
+const { logEvents } = require('../utils/logEvents')
 const UserModel = require('../auth/auth.model')
 const AppError = require('../utils/appError')
 
