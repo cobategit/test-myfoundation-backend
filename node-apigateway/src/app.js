@@ -25,7 +25,7 @@ const limiter = rateLimit({
 })
 
 const gatewayR = require('./routes/index')
-app.use('/api-gateway', limiter, gatewayR)
+app.use('/api-gateway', gatewayR)
 
 app.use('/', (req, res, next) => {
   res.status(404)

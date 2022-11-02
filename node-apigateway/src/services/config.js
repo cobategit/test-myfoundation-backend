@@ -4,7 +4,33 @@ const ENV = process.env
 
 module.exports = {
   services: {
-    campaign: {
+    auth: {
+      index: 0,
+      endpoints: [
+        {
+          name: 'register',
+          method: 'post',
+          authentication: false,
+        },
+        {
+          name: 'login',
+          method: 'post',
+          authentication: false,
+        },
+      ],
+      link: ENV.PATH_LINK,
+      instances: [
+        {
+          name: 'auth',
+          host: `${ENV.HOST}`,
+          protocol: 'http',
+          port: ENV.PORT_AUTH1,
+          url: `http://${ENV.HOST}:${ENV.PORT_AUTH1}`,
+        },
+      ],
+      loadBalancerStrategy: 'ROUND_ROBIN',
+    },
+    products: {
       index: 0,
       endpoints: [
         {
@@ -24,7 +50,7 @@ module.exports = {
         },
         {
           name: 'update',
-          method: 'put',
+          method: 'patch',
           authentication: true,
         },
         {
@@ -33,14 +59,14 @@ module.exports = {
           authentication: true,
         },
       ],
-      link: '/api/v1',
+      link: ENV.PATH_LINK,
       instances: [
         {
-          name: 'campaign',
+          name: 'products',
           host: `${ENV.HOST}`,
           protocol: 'http',
-          port: ENV.PORT_CAMPAIGN,
-          url: `http://${ENV.HOST}:${ENV.PORT_CAMPAIGN1}`,
+          port: ENV.PORT_PRODUCTS1,
+          url: `http://${ENV.HOST}:${ENV.PORT_PRODUCTS1}`,
         },
       ],
       loadBalancerStrategy: 'ROUND_ROBIN',

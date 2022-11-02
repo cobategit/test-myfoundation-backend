@@ -37,13 +37,18 @@ const gatewayS = asyncCatch(async (req, res, next) => {
   }
 
   try {
-    const dataS = await axios(configAxios)
+    const data = await axios(configAxios)
 
-    res.status(dataS.status).json(dataS.data)
+    res.status(data.status).json(data.data)
   } catch (error) {
-    res.status(500).json({
-      response_code: '111',
-      message: error,
+    const {
+      response: {
+        data: { status, response_code, message },
+      },
+    } = error
+    res.status(status).json({
+      response_code,
+      message,
     })
   }
 })

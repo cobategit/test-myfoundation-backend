@@ -10,7 +10,7 @@ module.exports = {
       max_memory_restart: '500M',
       exp_backoff_restart_delay: 100,
       env: {
-        PORT: 4004,
+        PORT: 4001,
         NODE_ENV: 'DEVELOPMENT',
       },
     },
