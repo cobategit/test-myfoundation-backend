@@ -14,7 +14,9 @@ Authorization => Bearer {{YOUR_TOKEN}}
 ![image](https://user-images.githubusercontent.com/29777307/199466263-7d0c2b15-9d33-4cdb-96b7-86ab3611a81b.png)
 
 Requered: email, password
+
 =========================================================================================================================================================================
+
 /login
 
 ![image](https://user-images.githubusercontent.com/29777307/199466729-9645f3bb-1a58-4076-ae38-968afdd95f1a.png)
