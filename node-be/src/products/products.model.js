@@ -16,7 +16,7 @@ const ProductModel = mysql.define(
       allowNull: true,
     },
     summary: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.TEXT,
       field: 'summary',
       allowNull: true,
     },
