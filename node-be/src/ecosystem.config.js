@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'nodebe',
-      script: './server.js',
+      script: './src/server.js',
       instances: 1,
       exec_mode: 'cluster',
       watch: true,
