@@ -149,7 +149,7 @@ const deleted = asyncCatch(async (req, res, next) => {
   try {
     await ProductModel.destroy({
       where: {
-        id: req.params.id,
+        id: req.query.id,
       },
       transaction: transaction,
     })
