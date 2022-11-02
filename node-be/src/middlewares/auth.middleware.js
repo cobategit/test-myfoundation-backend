@@ -16,15 +16,15 @@ const reqBearerTkn = asyncCatch(async (req, res, next) => {
     try {
       token = req.headers.authorization.split(' ')[1]
 
-      const { id, email } = await promisify(jwt.verify)(
+      const { email } = await promisify(jwt.verify)(
         token,
         process.env.JWT_SECRET
       )
 
       req.user = await UserModel.findOne({
         where: {
-          id: id,
-          email: email,
+          email,
+          token,
         },
       })
 
