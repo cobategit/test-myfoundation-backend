@@ -1,4 +1,7 @@
 ### EXPRESS CRUD WITH API GATEWAY
 
-### POSTMAN API
-URL => https://documenter.getpostman.com/view/7871231/2s8YRnmBJ7
+### POSTMAN DOCUMENTATION ONLINE
+https://documenter.getpostman.com/view/7871231/2s8YRnmBJ7
+
+### PROVIDE API
+HOST APIGATEWAY => [http://117.53.47.21:8000](http://117.53.47.21:8000)
