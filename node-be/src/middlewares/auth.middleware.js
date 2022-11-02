@@ -29,7 +29,7 @@ const reqBearerTkn = asyncCatch(async (req, res, next) => {
       })
 
       if (req.user == null) {
-        return next(new AppError('Data not found', 401, '111'))
+        return next(new AppError('Token not found', 401, '111'))
       }
 
       next()
