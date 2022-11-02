@@ -570,6 +570,169 @@
 							"body": "{\n    \"response_code\": \"111\",\n    \"message\": \"Password incorrect\"\n}"
 						}
 					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "YXBpLWdhdGV3YXkta2V5",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-Key",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczODM4OTJ9.A1c1wIIRvgeyEFN3TIqNBtW1NqglRJWbvhHU4W27K-s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_SERVER}}/auth/logout",
+							"host": [
+								"{{URL_SERVER}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczODM3OTZ9.GpZcNQ4CMNWmX_Z9M4KvT4o2ADlqjmvzBG3Y3vWMyf0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL_SERVER}}/auth/logout",
+									"host": [
+										"{{URL_SERVER}}"
+									],
+									"path": [
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.1"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Nov 2022 10:11:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-fl4R9AwJScwPEIaS8r/uEWo44MU\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Logout Success\",\n    \"response_code\": \"000\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -591,12 +754,12 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczNzUzMTcsImV4cCI6MTY2OTk2NzMxN30.NcEe6xxiC6_jimMUT2x5l-ji2r42BuvQ25Sj1Kbd538",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczODQwOTJ9.TUeOBqj7tdAfxinIcTkR1QvXkkItTEJHRy0EokMWVFA",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{URL_SERVER}}/products/list?page=1",
+							"raw": "{{URL_SERVER}}/products/list?page=1&price_less=13000",
 							"host": [
 								"{{URL_SERVER}}"
 							],
@@ -608,6 +771,10 @@
 								{
 									"key": "page",
 									"value": "1"
+								},
+								{
+									"key": "price_less",
+									"value": "13000"
 								}
 							]
 						}
@@ -1114,6 +1281,127 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"message\": \"Data found\",\n    \"response_code\": \"000\",\n    \"countProduct\": 3,\n    \"totalItems\": 3,\n    \"currentPage\": 1,\n    \"totalPages\": 1,\n    \"products\": [\n        {\n            \"id\": 2,\n            \"name\": \"product 3\",\n            \"summary\": \"summary product 3\",\n            \"price\": 14000,\n            \"created_at\": \"2022-11-02T07:50:15.000Z\",\n            \"updated_at\": \"2022-11-02T08:03:41.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"product 4\",\n            \"summary\": \"summary product 4\",\n            \"price\": 12000,\n            \"created_at\": \"2022-11-02T07:50:15.000Z\",\n            \"updated_at\": \"2022-11-02T08:03:41.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"product 5\",\n            \"summary\": \"summary product 5\",\n            \"price\": 10000,\n            \"created_at\": \"2022-11-02T07:50:15.000Z\",\n            \"updated_at\": \"2022-11-02T08:03:41.000Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "token not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "YXBpLWdhdGV3YXkta2V5",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczODM4OTJ9.A1c1wIIRvgeyEFN3TIqNBtW1NqglRJWbvhHU4W27K-s",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL_SERVER}}/products/list?page=1",
+									"host": [
+										"{{URL_SERVER}}"
+									],
+									"path": [
+										"products",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.1"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Nov 2022 10:14:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-GTzmCQQO25n/0251UB9pUf48Lkk\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response_code\": \"111\",\n    \"message\": \"Token not found\"\n}"
 						}
 					]
 				},
@@ -1132,13 +1420,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczNzUzMTcsImV4cCI6MTY2OTk2NzMxN30.NcEe6xxiC6_jimMUT2x5l-ji2r42BuvQ25Sj1Kbd538",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczODQwOTJ9.TUeOBqj7tdAfxinIcTkR1QvXkkItTEJHRy0EokMWVFA",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"product 1\",\r\n    \"summary\": \"summary product 1\",\r\n    \"price\": 10000\r\n}",
+							"raw": "{\r\n    \"name\": \"product 2\",\r\n    \"summary\": \"summary product 2\",\r\n    \"price\": 20000\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1415,7 +1703,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczNzUzMTcsImV4cCI6MTY2OTk2NzMxN30.NcEe6xxiC6_jimMUT2x5l-ji2r42BuvQ25Sj1Kbd538",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczODQwOTJ9.TUeOBqj7tdAfxinIcTkR1QvXkkItTEJHRy0EokMWVFA",
 								"type": "text"
 							}
 						],
@@ -1699,7 +1987,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczNzUzMTcsImV4cCI6MTY2OTk2NzMxN30.NcEe6xxiC6_jimMUT2x5l-ji2r42BuvQ25Sj1Kbd538",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJiYWJhbDFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjczODQwOTJ9.TUeOBqj7tdAfxinIcTkR1QvXkkItTEJHRy0EokMWVFA",
 								"type": "text"
 							}
 						],
