@@ -27,6 +27,11 @@ const UserModel = mysql.define(
       field: 'password',
       allowNull: false,
     },
+    token: {
+      type: DataTypes.TEXT,
+      field: 'token',
+      allowNull: true,
+    },
     created_at: {
       type: DataTypes.DATE,
       field: 'created_at',
@@ -43,7 +48,7 @@ const UserModel = mysql.define(
 )
 
 // create table automatice
-mysql.sync()
-mysql.sync({ force: false })
+UserModel.sync()
+UserModel.sync({ force: false })
 
 module.exports = UserModel

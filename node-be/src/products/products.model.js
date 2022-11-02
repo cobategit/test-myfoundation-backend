@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize')
 const mysql = require('../configs/mysql')
 
-const UserModel = mysql.define(
+const ProductModel = mysql.define(
   'tb_products',
   {
     id: {
@@ -41,7 +41,7 @@ const UserModel = mysql.define(
 )
 
 // create table automatice
-mysql.sync()
-mysql.sync({ force: false })
+ProductModel.sync()
+ProductModel.sync({ force: false })
 
-module.exports = UserModel
+module.exports = ProductModel

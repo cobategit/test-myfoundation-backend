@@ -64,22 +64,63 @@ const login = asyncCatch(async (req, res, next) => {
       return next(new AppError('Password incorrect', 400, '111'))
     }
 
+    let token = generateJwt(checkUser.id, checkUser.email, '30d')
+
+    await UserModel.update(
+      {
+        token,
+      },
+      {
+        where: { email },
+      }
+    )
+
     res.status(200).json({
       success: true,
       message: 'Data found',
       response_code: '000',
-      token: generateJwt(checkUser.id, checkUser.email, '30d'),
+      token,
       user: {
         id: checkUser.id,
         email: checkUser.email,
       },
     })
   } catch (error) {
-    return next(new AppError(`Failed Login Function - ${error}`, '111'))
+    return next(new AppError(`Failed Login Function - ${error}`, 400, '111'))
+  }
+})
+
+const logout = asyncCatch(async (req, res, next) => {
+  try {
+    const checkUser = await UserModel.findOne({
+      where: { email: req.user.email },
+    })
+
+    if (checkUser == null) {
+      return next(new AppError('Data not found', 400, '111'))
+    }
+
+    await UserModel.update(
+      {
+        token: null,
+      },
+      {
+        where: { email: req.user.email },
+      }
+    )
+
+    res.status(200).json({
+      success: true,
+      message: 'Logout Success',
+      response_code: '000',
+    })
+  } catch (error) {
+    return next(new AppError(`Failed Logout Function - ${error}`, 400, '111'))
   }
 })
 
 module.exports = {
   register,
   login,
+  logout,
 }
