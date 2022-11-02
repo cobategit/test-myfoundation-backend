@@ -10,19 +10,30 @@ X-API-KEY => YXBpLWdhdGV3YXkta2V5
 
 Authorization => Bearer {{YOUR_TOKEN}}
 
+
 ### ENDPOINT AUTH
-/auth/register
+POST /auth/register
 
 ![image](https://user-images.githubusercontent.com/29777307/199466263-7d0c2b15-9d33-4cdb-96b7-86ab3611a81b.png)
 
 Requered Body: email, password
+
 Headers: X-API-KEY
 
 ============================================================================================
 
-/auth/login
+POST /auth/login
 
 ![image](https://user-images.githubusercontent.com/29777307/199466729-9645f3bb-1a58-4076-ae38-968afdd95f1a.png)
 
 Requered Body: email, password
+
 Headers: X-API-KEY
+
+============================================================================================
+
+GET /auth/logout
+
+![image](https://user-images.githubusercontent.com/29777307/199467753-7ca7263d-9cd1-4973-b7d3-db5e8e271ea8.png)
+
+Headers: X-API-KEY, Authorization
