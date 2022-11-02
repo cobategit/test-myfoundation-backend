@@ -27,11 +27,18 @@ const validateFormProducts = asyncCatch(async (req, res, next) => {
 })
 
 const validateProductExist = asyncCatch(async (req, res, next) => {
-  const find = await ProductModel.findOne({
-    where: {
-      id: req.query.id,
-    },
-  })
+  let find
+  try {
+    find = await ProductModel.findOne({
+      where: {
+        id: req.query.id,
+      },
+    })
+  } catch (error) {
+    return next(
+      new AppError(`Validate Product Exists Error - ${error}`, 400, '111')
+    )
+  }
 
   if (find == null) {
     return next(new AppError('Product not found', 400, '111'))
