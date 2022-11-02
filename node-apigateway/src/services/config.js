@@ -17,6 +17,11 @@ module.exports = {
           method: 'post',
           authentication: false,
         },
+        {
+          name: 'logout',
+          method: 'get',
+          authentication: true,
+        },
       ],
       link: ENV.PATH_LINK,
       instances: [
