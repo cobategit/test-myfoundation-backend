@@ -5,7 +5,9 @@ https://documenter.getpostman.com/view/7871231/2s8YRnmBJ7
 
 ### TERMS API 
 HOST APIGATEWAY => [http://117.53.47.21:8000](http://117.53.47.21:8000)
+
 X-API-KEY => YXBpLWdhdGV3YXkta2V5
+
 Authorization => Bearer {{YOUR_TOKEN}}
 
 ### ENDPOINT AUTH
@@ -15,7 +17,7 @@ Authorization => Bearer {{YOUR_TOKEN}}
 
 Requered: email, password
 
-=========================================================================================================================================================================
+============================================================================================
 
 /login
 
